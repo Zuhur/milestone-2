@@ -1,0 +1,43 @@
+/* ------------------------ Home:Discover */
+#discover {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40vh;
+}
+
+.hero-heading-container {
+    position: relative;
+    width: 33%;
+    box-sizing: border-box;
+}
+
+.hero-heading-container h1 {
+    position: absolute;
+    bottom: 20%;
+    font-size: 4rem;
+    margin-left: 1rem;
+    color: lightblue;
+}
+
+.hero-container {
+    flex: 2;
+    justify-content: end;
+}
+
+#hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-heading-container h1 {
+        font-size: 2rem;
+        margin-left: 7px;
+    }
+    .hero-heading-container {
+        width: 40%;
+    }
+}
+
+/* ------------------------ Home:Places */
