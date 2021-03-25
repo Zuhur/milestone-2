@@ -1,8 +1,9 @@
+
 /* ------------------------ Home:Discover */
 #discover {
     display: flex;
     justify-content: space-between;
-    min-height: 40vh;
+    max-height: 80vh;
 }
 
 .hero-heading-container {
@@ -16,7 +17,7 @@
     bottom: 20%;
     font-size: 4rem;
     margin-left: 1rem;
-    color: lightblue;
+    color: #4189dd;
 }
 
 .hero-container {
@@ -41,3 +42,32 @@
 }
 
 /* ------------------------ Home:Places */
+#cities {
+    background-color: lightblue;
+    min-height: 400px;
+}
+
+#places-heading {
+    text-align: center;
+    padding: 20px 0;
+    color: beige;
+}
+
+.places-img img {
+    width: 100%;
+    height: 700px;
+}
+
+.places-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+
+.places-text-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* ------------------------ Home:Things To Do */
+
