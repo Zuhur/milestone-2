@@ -74,6 +74,14 @@
 
 /* ------------------------ Explore Map */
 
-#map {
-    min-height: 360px;
+/* ------------------------ Footer */
+
+footer {
+    background-color: #4189dd;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 0;
+    padding: 20px 10px;
 }
