@@ -9,7 +9,6 @@
             i.classList.add('places-text-appear');
         }
     }
-    
 }
 
 window.addEventListener('scroll', textAppear);
@@ -111,11 +110,6 @@ function createMarker(place) {
     });
 }
 
-
-    
-
-
-
 // Side menu options toggle
 
 var dropdownBtn = document.querySelectorAll('.dropdown-btn');
@@ -128,3 +122,49 @@ dropdownBtn.forEach(function(btn){
         console.log(this.children);
     }
 })
+
+// Carousel
+
+const coastList = ['boats-on-water.jpeg', 'ceel_sheekh.jpeg', 'hobyo-beach.png', 'jazeera-beach.png', 'kismayo.png', 'murcanyo-beach.png', 'murcanyo-cliff.jpeg', 'warsheikh-beach.jpeg'];
+const carousel = document.querySelector('.carousel');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const imgBtn = document.querySelectorAll('.img-btn');
+
+// styled about, explore coast sections
+imgBtn.forEach(function(el){
+    el.addEventListener('click', changeImg);
+    function changeImg(){
+        let currentImg = document.querySelector('.current-img').getAttribute('src');
+        let url = 'assets/images/'
+        if(el.id === 'next'){
+            for(i of coastList){
+                idx = coastList.indexOf(i);
+                if(url+i == currentImg && idx<7){
+                    idx++;
+                    document.querySelector('.current-img').src = url+coastList[idx];
+                    console.log(idx);
+                } else if(url+i == currentImg && idx==7){
+                    idx = 0;
+                    document.querySelector('.current-img').src = url+coastList[idx];
+                    console.log(idx);
+                }
+            }
+        } else if (el.id === 'prev'){
+            for(i of coastList){
+                idx = coastList.indexOf(i);
+                if(url+i == currentImg && idx>0){
+                    console.log(i,idx);
+                    idx--;
+                    document.querySelector('.current-img').src = url+coastList[idx];
+                }else if(url+i == currentImg && idx==0){
+                    idx = 7;
+                    document.querySelector('.current-img').src = url+coastList[idx];
+                    console.log(i,idx);
+                }
+            }
+        }
+    }
+})
+
+
