@@ -40,6 +40,34 @@
         width: 40%;
     }
 }
+/* ------------------------ Home:About */
+
+.about-coast{
+    background-color: lightblue;
+}
+
+.about-coast .container{
+    padding: 50px;
+}
+
+.title-about{
+    color: white;
+}
+
+.about-info {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+
+@media (max-width: 1024px){
+    .about-info {
+        width: 100%;
+    }
+    .about-coast .container{
+        padding: 30px 0;
+    }
+}
 
 /* ------------------------ Home:Places */
 #cities {
@@ -70,7 +98,57 @@
     transform: translateY(0px);
 }
 
-/* ------------------------ Home:Things To Do */
+/* ------------------------ Home:Explore coast */
+.carousel {
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+}
+
+.carousel i{
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.1s ease-in-out;
+}
+
+.carousel i:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+#next {
+    right: 0;
+    top: 50%;
+    margin-right: 100px;
+    line-height: 50px;
+}
+
+#prev {
+    left: 0;
+    top: 50%;
+    margin-left: 100px;
+    line-height: 50px;
+}
+
+#explore-coast h1{
+    color: #4189dd;
+    margin-top: 50px;
+}
 
 /* ------------------------ Explore Map (Map + Sidebar) */
 .side-map {
