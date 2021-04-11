@@ -40,77 +40,109 @@ Google fonts:
 -   New Tegomin
 -   Dancing Script
 
---REMOVE-- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
---REMOVE--
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Header - found at the top of the pages and allows user to navigate between pages and also within pages.
+- Home page 
+    - Discover section: hero image and page heading title
+    - About section: Summary about the countries coast, button to navigate to map of Somalia's coast.
+    - Explore section: Image carousel with next and previous buttons to slide through the images.
+- Map page: Google maps API and a vertical navigation bar with toggle button to hide and show at users request.
+- Footer: Copyrights information.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea
+#### Future features
+- The country has many undiscovered and unused beaches, in the future as more beaches become available more will be added along with more high quality images.
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+-	[HTML5](https://en.wikipedia.org/wiki/HTML5): For structuring of the site.
+-	[CSS3](https://en.wikipedia.org/wiki/CSS): For styling of the site.
+-   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): For making page interactive.
+-	[Bootsrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): For fast development of the site and its responsiveness.
+-   [Google maps API](https://developers.google.com/maps/documentation/javascript/overview): For displaying map on website.
+-	[Fontawesome](https://fontawesome.com/): For visual icons.
+-	[Github](https://github.com/): For remote access of the project.
+-	[Gitpod](https://www.gitpod.io/): Development environment on the browser.
+-	[Git](https://git-scm.com/): For version-control.
+-	[Visual Studio Code](https://code.visualstudio.com/): A development environment as an upgrade to gitpod.
+-	[Balsamiq](https://balsamiq.com/): For designing wireframes.
+-	[Google fonts](https://fonts.google.com/): Styling of the text.
+-   [Coolors](https://coolors.co/): For selecting colour palette.
 
 
 ## Testing
+### HTML Validation
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+### CSS Validation
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+### Responsivness
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+### Manual Test
+#### Header
+- All links were engaged to make sure they correspond to the right location and page.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+#### About
+- Hovering over button transforms correctly and navigates to correct location.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+#### Explore coast
+- The navigation button for the image sliders correctly take you to the next image or the previous image.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+#### Maps
+- The vertical navigation toggles correctly when hamburger icon is clicked.
+- Clicking the cities places marker on the each city.
+- Clicking the activity places marker accordingly. 
+- Navbar is also scrollable when all activities for each city are visible.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+#### Fork
+1. Navigate to [repository](https://github.com/Zuhur/milestone-2)
+2. Click fork in the top right corner.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+Follow this [link]( https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) on how to fork a repository.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+
+#### Clone Repository (Local copy)
+1. Navigate to [repository](https://github.com/Zuhur/milestone-2).
+2. Click Code located over the files.
+3. Select how you want to create the local repo.
+4. Copy the url.
+5. Open Terminal.
+6. Change directory to where you want the repo to be.
+7. type "git clone" followed by the url copied in step 4.
+8. Enter, and a Local repo is created.
+
+Follow this [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) on how to clone a repository.
+
+#### Deploy
+1.	Open this repository on Github [https://github.com/Zuhur/milestone-2]( https://github.com/Zuhur/milestone-2).
+2.	Go to settings .
+3.	Scroll down to GitHub Pages.
+4.	Select a branch (master) and then /(root).
+5.	Click save. 
+6.	Link available when scrolled down to Github Pages.
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- For helping with vertical navbar [youtube](https://www.youtube.com/watch?v=O9l75KOB2pE&t=2s)
+- For changing the location of map and satellite buttons [Stackoverflow](https://stackoverflow.com/questions/49994769/how-to-change-the-location-of-map-and-satellite-buttons-in-google-maps-api)
+- For adding infoWindow to markers on the maps [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/infowindows)
+- For searching locations on the maps [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/places)
+- 
 
 ### Media
-- The photos used in this site were obtained from ...
+- Gif: The gif on the header is from https://www.crossed-flag-pins.com/animated-flag-gif/flags-Somalia.html. 
+- Images
+    - Special permission to use images from - https://www.somger.com/post/top-10-best-beaches-in-somalia-with-photos-map
+    - https://commons.wikimedia.org/wiki/File:Ceel_Sheekh,_Somaliland.jpg
+    - https://upload.wikimedia.org/wikipedia/commons/0/0a/Coral_refs_in_the_of_shore_area_in_berbera_somalia.jpg 
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- Special Thanks to [Mustafa Mmj](https://www.somger.com/post/top-10-best-beaches-in-somalia-with-photos-map) who allowed me to use their images for this project.
