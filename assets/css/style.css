@@ -42,11 +42,11 @@
 }
 /* ------------------------ Home:About */
 
-.about-coast{
+#about-coast{
     background-color: lightblue;
 }
 
-.about-coast .container{
+#about-coast .container{
     padding: 50px;
 }
 
@@ -64,7 +64,7 @@
     .about-info {
         width: 100%;
     }
-    .about-coast .container{
+    #about-coast .container{
         padding: 30px 0;
     }
 }
@@ -117,7 +117,22 @@
     max-height: 80%;
 }
 
-.carousel i{
+@media (max-width: 768px) {
+    .carousel img {
+        position: relative;
+        max-width: 100%;
+        max-height: 50%;
+        margin: 10px auto;
+    }
+    .carousel i {
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    
+}
+
+.carousel i {
     position: absolute;
     background-color: rgba(128, 128, 128, 0.3);
     border-radius: 50%;
@@ -158,9 +173,15 @@
 }
 
 .sidebar-container {
-    width: 20%;
+    width: 250px;
     height: 100vh;
     position: relative;
+}
+
+@media (max-width:320px) {
+    .sidebar-container {
+        width: 200px;
+    }
 }
 
 .map-container {
@@ -176,6 +197,31 @@
     position: absolute;
     background-color: blue;
 }
+
+.nav-btn {
+    position: absolute;
+    font-size: 1.5em;
+    top: 85px;
+    left: 15px;
+    z-index: 1;
+    color: blue;
+    text-align: center;
+}
+
+.nav-btn.click {
+    left: 260px;
+}
+
+@media (max-width:320px) {
+    .nav-btn.click {
+        left: 210px;
+    }
+}
+
+.nav-btn.click:before {
+    content: '\f00d';
+}
+
 
 .sidebar h4 {
     text-align: center;
