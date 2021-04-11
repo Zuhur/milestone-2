@@ -29,23 +29,31 @@ var type = ['lodging']
 
 
 function initMap() {
-  var center = new google.maps.LatLng(coor.mogadishu.lat, coor.mogadishu.lng);
+var center = new google.maps.LatLng(coor.mogadishu.lat, coor.mogadishu.lng);
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: center,
-      zoom: 6,
+    
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: center,
+        zoom: 5,
+        mapTypeControlOptions: {
+        position: google.maps.ControlPosition.TOP_RIGHT
+        }
     });
-  
-  var request = {
+
+    var request = {
     location: center,
     radius: 8000,
     type: type
-  };
+    };
 
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
 }
-// marker for 
+// marker for each city
+
+
+
+// marker for each activity
 var city = document.querySelectorAll('.city');
 var activity = document.querySelectorAll('.activity');
 city.forEach(function(e){
@@ -166,5 +174,17 @@ imgBtn.forEach(function(el){
         }
     }
 })
+
+
+// Sliding map navbar
+var sideBar = document.querySelector('.sidebar-container');
+var navBtn = document.querySelector('.nav-btn');
+navBtn.addEventListener('click', sideBarToggler);
+
+function sideBarToggler(){
+    sideBar.classList.toggle('d-none');
+    sideBar.fade
+    navBtn.classList.toggle('click');
+}
 
 
