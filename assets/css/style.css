@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=New+Tegomin&display=swap');
+body {
+    font-family: 'New Tegomin', serif;
+}
 /* ------------------------ Home:Discover */
 #discover {
     display: flex;
@@ -12,12 +15,21 @@
     box-sizing: border-box;
 }
 
-.hero-heading-container h1 {
+.heading-text {
     position: absolute;
     bottom: 20%;
-    font-size: 4rem;
     margin-left: 1rem;
+}
+
+.heading-text h1 {
+    font-size: 3rem;
     color: #4189dd;
+}
+
+.heading-text h3 {
+    font-style: italic;
+    color: #cca253;
+    font-family: 'Dancing Script', cursive;
 }
 
 .hero-container {
@@ -32,18 +44,35 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .hero-heading-container h1 {
-        font-size: 2rem;
-        margin-left: 7px;
+    #discover {
+        height: 50vh;
+        background-image:url('/assets/images/murcanyo-beach.png');
+        background-position: center;
+        background-size: cover;
     }
-    .hero-heading-container {
-        width: 40%;
+    .hero-heading-container{
+        width: 80%;
+    }
+    .heading-text {
+        margin-left: 10px;
+    }
+    .heading-text h1 {
+        color: #e6e6e6 ;
+        font-size: 2rem;
+    }
+    .heading-text h3 {
+        color: #cca253;
+        font-size: 1rem;
+        margin-left: 2px;
+    }
+    .hero-container{
+        display: none;
     }
 }
 /* ------------------------ Home:About */
 
 #about-coast{
-    background-color: lightblue;
+    background-color: #add8e6;
 }
 
 #about-coast .container{
@@ -51,14 +80,26 @@
 }
 
 .title-about{
-    color: white;
+    color: #2A324B;
 }
+
+.title-about+p {
+    color: #4189dd;
+}
+
+.about-info+a:hover {
+    background-color: #cca253;
+    color: white;
+    border-color: #cca253;
+}
+
 
 .about-info {
     width: 60%;
     margin: auto;
     padding: 20px;
 }
+
 
 @media (max-width: 1024px){
     .about-info {
@@ -163,8 +204,17 @@
 }
 
 #explore-coast h1{
-    color: #4189dd;
+    color: #2A324B;
     margin-top: 50px;
+}
+
+hr {
+    color: #cca253;
+    opacity: 0.7;
+    width: 80px;
+    margin: 5px auto;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 /* ------------------------ Explore Map (Map + Sidebar) */
@@ -189,6 +239,7 @@
     flex: 2;
 }
 
+
 /* ------------------------ Explore Map (Sidebar) */
 
 .sidebar {
@@ -196,6 +247,7 @@
     height: 100%;
     position: absolute;
     background-color: blue;
+    overflow: scroll;
 }
 
 .nav-btn {
@@ -234,7 +286,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    list-style-type: none;
+    list-style-type: none; 
 }
 
 .nav-cities li {
