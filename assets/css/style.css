@@ -87,13 +87,6 @@ body {
     color: #4189dd;
 }
 
-.about-info+a:hover {
-    background-color: #cca253;
-    color: white;
-    border-color: #cca253;
-}
-
-
 .about-info {
     width: 60%;
     margin: auto;
