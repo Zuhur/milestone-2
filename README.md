@@ -1,6 +1,7 @@
 # Coast of Somalia
+![](assets/ms2-responsive-screen.png)
 
-**Live Page**: https://zuhur.github.io/milestone-2/
+[**Live Page**](https://zuhur.github.io/milestone-2/)
 
 **Milestone 2 project for Code institute Software Development Programme.** 
 
