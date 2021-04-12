@@ -133,23 +133,65 @@ body {
 }
 
 /* ------------------------ Home:Explore coast */
+#explore-coast h1{
+    color: #2A324B;
+    margin-top: 50px;
+}
+
+hr {
+    opacity: 1;
+    width: 80px;
+    margin: 5px auto;
+    padding: 4px;
+    border-radius: 5px;
+    border: 2px solid #cca253;
+}
+
+#explore-coast .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next {
+    margin-right: 100px;
+    line-height: 50px;
+    order: 3;
+    margin-left: 10px;
+}
+
+#prev {
+    margin-left: 100px;
+    line-height: 50px;
+    order: 1;
+    margin-right: 10px;
+}
+
 .carousel {
     height: 80vh;
     width: 100%;
     text-align: center;
     position: relative;
+    order: 2;
+    flex: 2;
+    display: flex;
+    
 }
 
 .carousel img {
-    position: absolute;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
+    
     margin: auto; 
-    max-width: 60%;
+    max-width: 80%;
     max-height: 80%;
 }
+
+#prev:hover,
+#next:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.8);
+    transition: 0.1s ease-in-out;
+}
+/*
 
 @media (max-width: 768px) {
     .carousel img {
@@ -162,53 +204,8 @@ body {
         position: relative;
         margin-top: 20px;
     }
-    
-    
 }
-
-.carousel i {
-    position: absolute;
-    background-color: rgba(128, 128, 128, 0.3);
-    border-radius: 50%;
-    width:50px;
-    height:50px;
-    text-align: center;
-    vertical-align: middle;
-    transition: 0.1s ease-in-out;
-}
-
-.carousel i:hover {
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.8);
-}
-
-#next {
-    right: 0;
-    top: 50%;
-    margin-right: 100px;
-    line-height: 50px;
-}
-
-#prev {
-    left: 0;
-    top: 50%;
-    margin-left: 100px;
-    line-height: 50px;
-}
-
-#explore-coast h1{
-    color: #2A324B;
-    margin-top: 50px;
-}
-
-hr {
-    color: #cca253;
-    opacity: 0.7;
-    width: 80px;
-    margin: 5px auto;
-    padding: 4px;
-    border-radius: 5px;
-}
+ */
 
 /* ------------------------ Explore Map (Map + Sidebar) */
 .side-map {
@@ -351,3 +348,55 @@ footer p {
     margin-bottom: 0;
     padding: 20px 10px;
 }
+
+
+/* ------------------------ Testing */
+.test-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.test-carousel {
+    order: 2;
+    flex: 2;
+    display: flex;
+    max-height: 600px;
+    justify-content: center;
+}
+
+.test-current-img {
+    width: 80%;
+    max-height: 40%;
+}
+
+#prev {
+    order: 1;
+}
+
+#next {
+    order:3;
+}
+
+#prev,
+#next {
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.1s ease-in-out;
+    color: black;
+}
+.test-container i:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+@media (max-width: 768px){
+    .test-container i {
+        position: relative;
+    }
+}
+
