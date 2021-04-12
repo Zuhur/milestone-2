@@ -46,7 +46,7 @@ body {
 @media (max-width: 768px) {
     #discover {
         height: 50vh;
-        background-image:url('/assets/images/murcanyo-beach.png');
+        background-image:url('../images/murcanyo-beach.png');
         background-position: center;
         background-size: cover;
     }
