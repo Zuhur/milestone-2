@@ -194,38 +194,52 @@ hr {
 }
 
 .carousel {
-    height: 80vh;
+    height: 500px;
     width: 100%;
     text-align: center;
     position: relative;
     order: 2;
     flex: 2;
     display: flex;
-    
 }
 
-.carousel img {
-    
-    margin: auto; 
-    max-width: 80%;
-    max-height: 80%;
+.current-img{
+    margin: 50px auto; 
+    margin-bottom: 100px;
+    max-width: 100%;
+    max-height: 100%;
 }
-
-/*
 
 @media (max-width: 768px) {
-    .carousel img {
-        position: relative;
-        max-width: 100%;
-        max-height: 50%;
-        margin: 10px auto;
+    .img-btn {
+        background-color: transparent;
+        width:20px;
+        height:20px;
+        text-align: center;
+        vertical-align: middle;
+        transition: 0.1s ease-in-out;
+        font-size: 15px;
     }
-    .carousel i {
-        position: relative;
-        margin-top: 20px;
+
+    .img-btn:hover {
+        background-color: transparent;
+    }
+    #next {
+        margin-right: 0;
+        line-height: 20px;
+        order: 3;
+        margin-left: 10px;
+    }
+    #prev {
+        margin-left: 0;
+        line-height: 20px;
+        order: 1;
+        margin-right: 10px;
+    }
+    footer {
+        font-size: smaller;
     }
 }
- */
 
 /* ------------------------ Explore Map (Map + Sidebar) */
 .side-map {
