@@ -2,6 +2,17 @@
 body {
     font-family: 'New Tegomin', serif;
 }
+
+/* ------------------------ Header */
+
+.navbar-brand {
+    color: #2A324B !important;
+}
+
+.nav-link {
+    color: #3e5392 !important;
+}
+
 /* ------------------------ Home:Discover */
 #discover {
     display: flex;
@@ -399,4 +410,3 @@ footer p {
         position: relative;
     }
 }
-
