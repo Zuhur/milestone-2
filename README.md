@@ -25,9 +25,9 @@ The structure if the website is two-page application with the utlisation of sing
 
 ### Skeletal
 The wireframes were designed using the balsamiq tool for different sections and screen sizes. These can be found below:
-*   [Desktop wireframe](milestone-2/assets/wireframes/ms2-wireframes-desktop.pdf)
-*   [Mobile wireframe](milestone-2/assets/wireframes/ms2-wireframes-mobile.pdf)
-*   [Tablet wireframe](milestone-2/assets/wireframes/ms2-wireframes-tablet.pdf)
+*   [Desktop wireframe](assets/wireframes/ms2-wireframes-desktop.pdf)
+*   [Mobile wireframe](assets/wireframes/ms2-wireframes-mobile.pdf)
+*   [Tablet wireframe](assets/wireframes/ms2-wireframes-tablet.pdf)
 
 ### Surface
 
