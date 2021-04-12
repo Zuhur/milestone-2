@@ -65,7 +65,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 -	[HTML5](https://en.wikipedia.org/wiki/HTML5): For structuring of the site.
 -	[CSS3](https://en.wikipedia.org/wiki/CSS): For styling of the site.
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): For making page interactive.
--	[Bootsrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): For fast development of the site and its responsiveness.
+-	[Bootsrap4](https://getbootstrap.com/docs/5.0/getting-started/introduction/): For fast development of the site and its responsiveness.
 -   [Google maps API](https://developers.google.com/maps/documentation/javascript/overview): For displaying map on website.
 -	[Fontawesome](https://fontawesome.com/): For visual icons.
 -	[Github](https://github.com/): For remote access of the project.
@@ -79,9 +79,14 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Testing
 ### HTML Validation
+The validator used was [https://validator.w3.org/](https://validator.w3.org/)
+- "Document checking completed. No errors or warnings to show."
 
 ### CSS Validation
-
+The CSS validator used was [https://jigsaw.w3.org/css-validator/validator]( https://jigsaw.w3.org/css-validator/validator)
+-	17 errors were shown all on Bootstrap5 level
+-	Resolved by switiching to Bootsrap4 
+-	No error found
 ### Responsivness
 
 
