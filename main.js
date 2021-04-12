@@ -168,3 +168,12 @@ function sideBarToggler(){
     navBtn.classList.toggle('click');
 }
 
+// collapse header after clicking link
+const navLinks = document.querySelectorAll('.nav-link');
+const collapseNav = document.getElementById('navbarNav');
+navLinks.forEach(function(e){
+    e.addEventListener('click', function(){
+        collapseNav.classList.remove('show');
+        header.classList.add('fixed-top').remove('sticky-top');
+    })
+})
