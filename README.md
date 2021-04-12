@@ -87,8 +87,13 @@ The CSS validator used was [https://jigsaw.w3.org/css-validator/validator]( http
 -	17 errors were shown all on Bootstrap5 level
 -	Resolved by switiching to Bootsrap4 
 -	No error found
-### Responsivness
 
+### JavaScript Validation
+The validator used was [https://jshint.com/](https://jshint.com/)
+
+### Responsiveness
+- Google devtools was used to make sure the site is responsive to different devices and screen sizes.
+- Chrome extension [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) was also used which shows multiple screens of different sizes at once.
 
 ### Manual Test
 #### Header
