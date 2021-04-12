@@ -1,6 +1,9 @@
 # Coast of Somalia
 
+**Live Page**: https://zuhur.github.io/milestone-2/
+
 **Milestone 2 project for Code institute Software Development Programme.** 
+
 A country with the longest coast in the whole of mainland Africa deserves to be showcased. As such, I have assembled a website utilising google maps API. The website consists of a home page displaying information about Somalia's coast and a varitey of images. Should further interest be shown theres a maps page to help navigate through the coastal cities.  
  
 ## UX
