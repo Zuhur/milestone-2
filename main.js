@@ -1,7 +1,6 @@
 // Carousel
 
 const coastList = ['boats-on-water.jpeg', 'ceel_sheekh.jpeg', 'hobyo-beach.png', 'jazeera-beach.png', 'kismayo.png', 'murcanyo-beach.png', 'murcanyo-cliff.jpeg', 'warsheikh-beach.jpeg'];
-const carousel = document.querySelector('.carousel');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const imgBtn = document.querySelectorAll('.img-btn');
@@ -58,7 +57,7 @@ function initMap() {
         zoom: 4,
         center: center,
         mapTypeControlOptions: {
-            position: google.maps.ControlPosition.TOP_RIGHT
+            position: google.maps.ControlPosition.LEFT_BOTTOM
         }
     });
     new google.maps.Marker({
@@ -77,7 +76,7 @@ city.forEach(function(e){
             zoom: 6,
             center: cityLoc,
             mapTypeControlOptions: {
-                position: google.maps.ControlPosition.TOP_RIGHT
+                position: google.maps.ControlPosition.LEFT_BOTTOM
             }
         });
         var marker = new google.maps.Marker({
@@ -117,7 +116,7 @@ city.forEach(function(e){
                     center: new google.maps.LatLng(coor[cityLoc].lat, coor[cityLoc].lng),
                     zoom: 12,
                     mapTypeControlOptions: {
-                        position: google.maps.ControlPosition.TOP_RIGHT
+                        position: google.maps.ControlPosition.LEFT_BOTTOM
                     }
                 });
 
@@ -168,8 +167,5 @@ navBtn.addEventListener('click', sideBarToggler);
 
 function sideBarToggler(){
     sideBar.classList.toggle('d-none');
-    sideBar.fade
     navBtn.classList.toggle('click');
-}
-
-
+} 
