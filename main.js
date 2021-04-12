@@ -10,36 +10,32 @@ imgBtn.forEach(function(el){
     el.addEventListener('click', changeImg);
     function changeImg(){
         let currentImg = document.querySelector('.current-img').getAttribute('src');
-        let url = 'assets/images/'
+        let url = 'assets/images/';
         if(el.id === 'next'){
             for(i of coastList){
                 idx = coastList.indexOf(i);
                 if(url+i == currentImg && idx<7){
                     idx++;
                     document.querySelector('.current-img').src = url+coastList[idx];
-                    console.log(idx);
                 } else if(url+i == currentImg && idx==7){
                     idx = 0;
                     document.querySelector('.current-img').src = url+coastList[idx];
-                    console.log(idx);
                 }
             }
         } else if (el.id === 'prev'){
             for(i of coastList){
                 idx = coastList.indexOf(i);
                 if(url+i == currentImg && idx>0){
-                    console.log(i,idx);
                     idx--;
                     document.querySelector('.current-img').src = url+coastList[idx];
                 }else if(url+i == currentImg && idx==0){
                     idx = 7;
                     document.querySelector('.current-img').src = url+coastList[idx];
-                    console.log(i,idx);
                 }
             }
         }
     }
-})
+});
 
 // Google Maps API  
 var coor = {
@@ -48,7 +44,7 @@ var coor = {
     'kismayo': {lat: -0.3540976, lng: 42.5278184}, // check location is correct
     'bosaso': {lat: 11.2755, lng: 49.1879},
     'berbera': {lat: 10.4325373, lng: 44.9946415},
-    'hargeisa': {lat: 9.5624, lng: 44.0770},
+    'hobyo': {lat: 5.3516146, lng: 48.5203833},
 };
 
 function initMap() {
@@ -89,27 +85,28 @@ city.forEach(function(e){
         marker.addListener('click', function(){
             infoWindow.open(map, marker);
         });
-    })
-})
+    });
+});
 
 // marker for each activity
 
 var activity = document.querySelectorAll('.activity');
+var type;
 city.forEach(function(e){
     e.addEventListener('click', function(){
         let cityLoc = this.id;
         activity.forEach(function(e){
             e.addEventListener('click', function(){
                 if(this.classList.contains('food')){
-                    var type = ['food','cafe', 'restaurant'];
+                    type = ['food','cafe', 'restaurant'];
                 } else if(this.classList.contains('hotel')){
-                    var type = ['lodging'];
+                    type = ['lodging'];
                 } else if(this.classList.contains('beach')){
-                    var type = ['natural_feature'];
+                    type = ['natural_feature'];
                 } else if(this.classList.contains('shopping')){
-                    var type = ['clothing_store','shopping_mall'];
+                    type = ['clothing_store','shopping_mall'];
                 } else if(this.classList.contains('culture')){
-                    var type = ['museum'];
+                    type = ['museum'];
                 }
 
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -126,10 +123,10 @@ city.forEach(function(e){
                     type: type
                 };
                 var service = new google.maps.places.PlacesService(map);service.nearbySearch(request, callback);
-            })
-        })
-    }) 
-})
+            });
+        });
+    }); 
+});
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -156,16 +153,26 @@ dropdownBtn.forEach(function(btn){
 
     function showOptions() {
         this.nextElementSibling.classList.toggle('show');
-        console.log(this.children);
     }
-})
+});
 
 // Sliding map navbar
 const sideBar = document.querySelector('.sidebar-container');
 const navBtn = document.querySelector('.nav-btn');
-navBtn.addEventListener('click', sideBarToggler);
+if(navBtn){
+    navBtn.addEventListener('click', sideBarToggler);
+} 
 
 function sideBarToggler(){
     sideBar.classList.toggle('d-none');
     navBtn.classList.toggle('click');
-} 
+}
+
+// Once starting scrolling make header sticky
+const header = document.querySelector('.navbar');
+window.addEventListener('scroll', function(){
+    if(window.scrollY > 1){
+        console.log(window.scrollY);
+        header.classList.add('sticky-top');
+    } 
+})
