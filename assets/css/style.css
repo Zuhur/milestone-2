@@ -213,6 +213,7 @@ hr {
 /* ------------------------ Explore Map (Map + Sidebar) */
 .side-map {
     display: flex;
+    position: relative;
 }
 
 .sidebar-container {
@@ -246,7 +247,7 @@ hr {
 .nav-btn {
     position: absolute;
     font-size: 1.5em;
-    top: 85px;
+    top: 25px;
     left: 15px;
     z-index: 1;
     color: blue;
