@@ -168,11 +168,3 @@ function sideBarToggler(){
     navBtn.classList.toggle('click');
 }
 
-// Once starting scrolling make header sticky
-const header = document.querySelector('.navbar');
-window.addEventListener('scroll', function(){
-    if(window.scrollY > 1){
-        console.log(window.scrollY);
-        header.classList.add('sticky-top');
-    } 
-})
