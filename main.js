@@ -1,36 +1,35 @@
 // Carousel
 
 const coastList = ['boats-on-water.jpeg', 'ceel_sheekh.jpeg', 'hobyo-beach.png', 'jazeera-beach.png', 'kismayo.png', 'murcanyo-beach.png', 'murcanyo-cliff.jpeg', 'warsheikh-beach.jpeg'];
-const nextBtn = document.getElementById('next');
-const prevBtn = document.getElementById('prev');
 const imgBtn = document.querySelectorAll('.img-btn');
+let idx;
 
 // styled about, explore coast sections
-imgBtn.forEach(function(el){
+imgBtn.forEach(function (el) {
     el.addEventListener('click', changeImg);
-    function changeImg(){
+    function changeImg() {
         let currentImg = document.querySelector('.current-img').getAttribute('src');
         let url = 'assets/images/';
-        if(el.id === 'next'){
-            for(i of coastList){
+        if (el.id === 'next') {
+            for (let i of coastList) {
                 idx = coastList.indexOf(i);
-                if(url+i == currentImg && idx<7){
+                if (url + i == currentImg && idx < 7) {
                     idx++;
-                    document.querySelector('.current-img').src = url+coastList[idx];
-                } else if(url+i == currentImg && idx==7){
+                    document.querySelector('.current-img').src = url + coastList[idx];
+                } else if (url + i == currentImg && idx == 7) {
                     idx = 0;
-                    document.querySelector('.current-img').src = url+coastList[idx];
+                    document.querySelector('.current-img').src = url + coastList[idx];
                 }
             }
-        } else if (el.id === 'prev'){
-            for(i of coastList){
+        } else if (el.id === 'prev') {
+            for (let i of coastList) {
                 idx = coastList.indexOf(i);
-                if(url+i == currentImg && idx>0){
+                if (url + i == currentImg && idx > 0) {
                     idx--;
-                    document.querySelector('.current-img').src = url+coastList[idx];
-                }else if(url+i == currentImg && idx==0){
+                    document.querySelector('.current-img').src = url + coastList[idx];
+                } else if (url + i == currentImg && idx == 0) {
                     idx = 7;
-                    document.querySelector('.current-img').src = url+coastList[idx];
+                    document.querySelector('.current-img').src = url + coastList[idx];
                 }
             }
         }
@@ -39,12 +38,12 @@ imgBtn.forEach(function(el){
 
 // Google Maps API  
 var coor = {
-    'somalia': {lat: 5.1521, lng: 46.1996},
-    'mogadishu': {lat: 2.0591993, lng:45.2366242},
-    'kismayo': {lat: -0.3540976, lng: 42.5278184}, // check location is correct
-    'bosaso': {lat: 11.2755, lng: 49.1879},
-    'berbera': {lat: 10.4325373, lng: 44.9946415},
-    'hobyo': {lat: 5.3516146, lng: 48.5203833},
+    'somalia': { lat: 5.1521, lng: 46.1996 },
+    'mogadishu': { lat: 2.0591993, lng: 45.2366242 },
+    'kismayo': { lat: -0.3540976, lng: 42.5278184 }, // check location is correct
+    'bosaso': { lat: 11.2755, lng: 49.1879 },
+    'berbera': { lat: 10.4325373, lng: 44.9946415 },
+    'hobyo': { lat: 5.3516146, lng: 48.5203833 },
 };
 
 function initMap() {
@@ -59,14 +58,14 @@ function initMap() {
     new google.maps.Marker({
         position: center,
         map,
-        
+
     });
 }
 // marker for each city
 var city = document.querySelectorAll('.city');
 
-city.forEach(function(e){
-    e.addEventListener('click', function(){
+city.forEach(function (e) {
+    e.addEventListener('click', function () {
         var cityLoc = coor[this.id];
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 6,
@@ -77,35 +76,35 @@ city.forEach(function(e){
         });
         var marker = new google.maps.Marker({
             position: cityLoc,
-            map, 
+            map,
         });
         var infoWindow = new google.maps.InfoWindow({
             content: `<h6>${(this.id).toUpperCase()}</h6>`
         });
-        marker.addListener('click', function(){
+        // adds marker when city in navbar is clicked
+        marker.addListener('click', function () {
             infoWindow.open(map, marker);
         });
     });
 });
 
 // marker for each activity
-
 var activity = document.querySelectorAll('.activity');
 var type;
-city.forEach(function(e){
-    e.addEventListener('click', function(){
+city.forEach(function (e) {
+    e.addEventListener('click', function () {
         let cityLoc = this.id;
-        activity.forEach(function(e){
-            e.addEventListener('click', function(){
-                if(this.classList.contains('food')){
-                    type = ['food','cafe', 'restaurant'];
-                } else if(this.classList.contains('hotel')){
+        activity.forEach(function (e) {
+            e.addEventListener('click', function () {
+                if (this.classList.contains('food')) {
+                    type = ['food', 'cafe', 'restaurant'];
+                } else if (this.classList.contains('hotel')) {
                     type = ['lodging'];
-                } else if(this.classList.contains('beach')){
+                } else if (this.classList.contains('beach')) {
                     type = ['natural_feature'];
-                } else if(this.classList.contains('shopping')){
-                    type = ['clothing_store','shopping_mall'];
-                } else if(this.classList.contains('culture')){
+                } else if (this.classList.contains('shopping')) {
+                    type = ['clothing_store', 'shopping_mall'];
+                } else if (this.classList.contains('culture')) {
                     type = ['museum'];
                 }
 
@@ -122,25 +121,25 @@ city.forEach(function(e){
                     radius: 8000,
                     type: type
                 };
-                var service = new google.maps.places.PlacesService(map);service.nearbySearch(request, callback);
+                var service = new google.maps.places.PlacesService(map); service.nearbySearch(request, callback);
             });
         });
-    }); 
+    });
 });
 
 function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (let i = 0; i < results.length; i++) {
-      createMarker(results[i]);
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (let i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
     }
-  }
 }
 
 function createMarker(place) {
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: placeLoc
     });
 }
 
@@ -148,7 +147,7 @@ function createMarker(place) {
 
 const dropdownBtn = document.querySelectorAll('.dropdown-btn');
 
-dropdownBtn.forEach(function(btn){
+dropdownBtn.forEach(function (btn) {
     btn.addEventListener('click', showOptions);
 
     function showOptions() {
@@ -159,21 +158,21 @@ dropdownBtn.forEach(function(btn){
 // Sliding map navbar
 const sideBar = document.querySelector('.sidebar-container');
 const navBtn = document.querySelector('.nav-btn');
-if(navBtn){
+console.log(navBtn);
+if (navBtn) {
     navBtn.addEventListener('click', sideBarToggler);
-} 
+}
 
-function sideBarToggler(){
+function sideBarToggler() {
     sideBar.classList.toggle('d-none');
     navBtn.classList.toggle('click');
 }
 
-// collapse header after clicking link
+// collapse header after clicking links
 const navLinks = document.querySelectorAll('.nav-link');
 const collapseNav = document.getElementById('navbarNav');
-navLinks.forEach(function(e){
-    e.addEventListener('click', function(){
+navLinks.forEach(function (e) {
+    e.addEventListener('click', function () {
         collapseNav.classList.remove('show');
-        header.classList.add('fixed-top').remove('sticky-top');
-    })
-})
+    });
+});
