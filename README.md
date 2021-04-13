@@ -17,8 +17,8 @@ The aim of this website is to showcase Somalia's coast and attract travellers to
 - As a site user, I want to see coastal images.
 - As a site user, I want to use map to navigate different coastal cities.
 - As a site user, I want to use map to see beaches available in coastal cities.
-- As a site user, I want to use map to see where I can stay should I visit.
-- As a site user, I want to use map to see where I can shop should I visit.
+- As a site user, I want to use map to see where I can stay.
+- As a site user, I want to use map to see where I can shop.
 - As a site user, I want to use map to see what activities are available in the city.
 
 ### Scope
@@ -98,6 +98,7 @@ The validator used was [https://jshint.com/](https://jshint.com/)
 ### Manual Test
 #### Header
 - All links were engaged to make sure they correspond to the right location and page.
+- Navbar toggler collapses after clicking a link.
 
 #### About
 - Hovering over button transforms correctly and navigates to correct location.
