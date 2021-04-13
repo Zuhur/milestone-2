@@ -6,7 +6,38 @@
 **Milestone 2 project for Code institute Software Development Programme.** 
 
 A country with the longest coast in the whole of mainland Africa deserves to be showcased. As such, I have assembled a website utilising google maps API. The website consists of a home page displaying information about Somalia's coast and a varitey of images. Should further interest be shown theres a maps page to help navigate through the coastal cities.  
+
+<details>
+ <summary><strong>Table of contents</strong></summary>
  
+ ## Table of contents
+-   [UX](#ux)
+    *   [Strategy](#strategy)
+        *   [User Stories](#user-stories)    
+    *   [Scope](#scope)
+    *   [Structure](#structure)
+    *   [Skeletal](#skeletal)    
+    *   [Surface](#surface)
+        *   [Colors](#colors)    
+        *   [Fonts](#fonts)  
+-   [Features](#features)
+    *   [Existing Features](#existing-features) 
+        *   [Future features](#future-features)
+-   [Technologies Used](#technologies-used)   
+-   [Testing](#testing)
+    *   [HTML Validation](#html-validation)
+    *   [CSS Validation](#css-validation)
+    *   [JavaScript Validation](#javascript-validation)
+    *   [Responsiveness](#responsiveness)
+    *   [Manual Test](#manual-test)
+-   [Deployment](#deployment)
+-   [Credits](#credits)
+    *   [Content](#manual-test)
+    *   [Media](#manual-test)
+    *   [Manual Test](#manual-test)
+-   [Acknowledgements](#acknowledgements)
+</details>
+
 ## UX
 ### Strategy
 The aim of this website is to showcase Somalia's coast and attract travellers to visit the country by showing different types of beaches and also displaying multiple activities which can be done in the coastal cities. By visiting the website they'll be prompted to visit the country and the website is also equipped with navigating them through the cities should they visit.
@@ -64,9 +95,9 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 -	[HTML5](https://en.wikipedia.org/wiki/HTML5): For structuring of the site.
 -	[CSS3](https://en.wikipedia.org/wiki/CSS): For styling of the site.
--   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): For making page interactive.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): For making page interactive.
 -	[Bootsrap4](https://getbootstrap.com/docs/5.0/getting-started/introduction/): For fast development of the site and its responsiveness.
--   [Google maps API](https://developers.google.com/maps/documentation/javascript/overview): For displaying map on website.
+- [Google maps API](https://developers.google.com/maps/documentation/javascript/overview): For displaying map on website.
 -	[Fontawesome](https://fontawesome.com/): For visual icons.
 -	[Github](https://github.com/): For remote access of the project.
 -	[Gitpod](https://www.gitpod.io/): Development environment on the browser.
@@ -74,7 +105,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 -	[Visual Studio Code](https://code.visualstudio.com/): A development environment as an upgrade to gitpod.
 -	[Balsamiq](https://balsamiq.com/): For designing wireframes.
 -	[Google fonts](https://fonts.google.com/): Styling of the text.
--   [Coolors](https://coolors.co/): For selecting colour palette.
+- [Coolors](https://coolors.co/): For selecting colour palette.
 
 
 ## Testing
