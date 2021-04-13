@@ -91,9 +91,10 @@ city.forEach(function (e) {
 // marker for each activity
 var activity = document.querySelectorAll('.activity');
 var type;
+var cityLoc;
 city.forEach(function (e) {
     e.addEventListener('click', function () {
-        let cityLoc = this.id;
+        cityLoc = this.id;
         activity.forEach(function (e) {
             e.addEventListener('click', function () {
                 if (this.classList.contains('food')) {
@@ -107,7 +108,6 @@ city.forEach(function (e) {
                 } else if (this.classList.contains('culture')) {
                     type = ['museum'];
                 }
-
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(coor[cityLoc].lat, coor[cityLoc].lng),
                     zoom: 12,
@@ -141,6 +141,13 @@ function createMarker(place) {
         map: map,
         position: placeLoc
     });
+    var infoWindow = new google.maps.InfoWindow({
+        content: `<h6>${(cityLoc).toUpperCase()}</h6><p>${type}</p>`
+    });
+    // adds marker when city in navbar is clicked
+    marker.addListener('click', function () {
+        infoWindow.open(map, marker);
+    });
 }
 
 // Side menu options toggle
@@ -158,7 +165,7 @@ dropdownBtn.forEach(function (btn) {
 // Sliding map navbar
 const sideBar = document.querySelector('.sidebar-container');
 const navBtn = document.querySelector('.nav-btn');
-console.log(navBtn);
+
 if (navBtn) {
     navBtn.addEventListener('click', sideBarToggler);
 }
