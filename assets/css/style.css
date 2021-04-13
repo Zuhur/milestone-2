@@ -73,7 +73,7 @@ body {
     }
     .heading-text h3 {
         color: #cca253;
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-left: 2px;
     }
     .hero-container{
@@ -101,9 +101,13 @@ body {
 .about-info {
     width: 60%;
     margin: auto;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
+.about-length {
+    margin-top: 30px;
+    font-weight: bold;
+}
 
 @media (max-width: 1024px){
     .about-info {
